@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { StatusBar, LogBox } from 'react-native';
 import { useFonts } from 'expo-font';
 import AppLoading from 'expo-app-loading';
@@ -9,6 +9,8 @@ import { Background } from './src/components/Background';
 
 import { Routes } from './src/routes';
 import { AuthProvider } from './src/hooks/auth';
+import AsyncStorage from '@react-native-async-storage/async-storage';
+import { COLLECTION_APPOINTMENTS } from './src/configs/database';
 
 LogBox.ignoreLogs(['You are not currently signed in to Expo on your development machine.']);
 
